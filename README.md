@@ -9,8 +9,8 @@ A simple PowerShell script for bulk renaming Kenshi mod folders from Steam Works
 #### Usage
 
 ```javascript
-.\kenshi-mod-renamer.ps1 -Directory <path>
-.\kenshi-mod-renamer.ps1 -d <path>
+.\kenshi-bulk-rename.ps1 -Directory <path>
+.\kenshi-bulk-rename.ps1 -d <path>
 ```
 
 #### Parameters
