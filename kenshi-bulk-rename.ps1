@@ -27,7 +27,7 @@ foreach ($folder in $subfolders) {
         if ($folder.Name -eq $modFileName) {
             Write-Host "Skipping: '$($folder.Name)' has correct filename" -ForegroundColor DarkGray
         } elseif (Test-Path -LiteralPath $newPath) {
-            Write-Host "Skipping: '$($folder.Name)' shares .mod filename with an existing folder '$modFileName'" -ForegroundColor LightGray
+            Write-Host "Skipping: '$($folder.Name)' shares .mod filename with an existing folder '$modFileName'" -ForegroundColor Gray
         } else {
             Rename-Item -LiteralPath $folder.FullName -NewName $modFileName
             Write-Host "'$($folder.Name)' renamed to '$modFileName'" -ForegroundColor Green
@@ -39,7 +39,7 @@ foreach ($folder in $subfolders) {
         if ($iniFile) {
             Write-Host "Warning: No .mod found in folder '$($folder.Name)' which contains possible configuration file '$($iniFile.Name)'" -ForegroundColor Yellow
         } else {
-            Write-Host "Warning: No .mod found in folder '$($folder.Name)'" -ForegroundColor LightYellow
+            Write-Host "Warning: No .mod found in folder '$($folder.Name)'" -ForegroundColor DarkYellow
         }
     }
 }
